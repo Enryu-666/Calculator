@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="project-frame">
+        <header class="project-header">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd8b1695-ff73-49b6-8a29-f271da6d1c34.png"
+                alt="Modern calculator icon with gray background and white text, rounded edges" />
+            <h1>Beginner Simple Calculator</h1>
+            <p>Build a functional calculator using HTML, CSS, and JavaScript</p>
+        </header>
+
+        <section class="instructions">
+            <strong>Project Instructions & Milestones:</strong>
+            <ol>
+                <li><strong>HTML:</strong> Create a display area for the calculator output and buttons for digits (0-9),
+                    decimal, operators (+, −, ×, ÷), clear, and equals.</li>
+                <li><strong>CSS:</strong> Style the calculator to have a modern look with distinct buttons and a large
+                    display.</li>
+                <li><strong>JavaScript:</strong>
+                    <ul>
+                        <li>Implement button clicks to display numbers and operators in the display area.</li>
+                        <li>Calculate the result when equals is pressed.</li>
+                        <li>Implement clear button to reset the calculator display.</li>
+                        <li>Handle basic error cases, such as dividing by zero.</li>
+                    </ul>
+                </li>
+                <li><strong>Bonus:</strong> Add keyboard support for number and operator inputs.</li>
+            </ol>
+            <p><em>Follow these milestones inside the respective parts to complete the calculator project!</em></p>
+        </section>
+
+        <!-- BEGIN PROJECT HTML FRAME -->
+        <div id="calc-display" aria-live="polite" aria-atomic="true" aria-label="Calculator display" role="textbox">
+            <!-- TODO: This is where the input and results will be shown -->
+            <p id="display-output" class="display-output">0</p>
+        </div>
+
+        <div id="calc-buttons" role="group" aria-label="Calculator buttons">
+            <!-- TODO: Add buttons for digits 0-9, decimal point (.), operators +, -, ×, ÷, clear (C), and equals (=) -->
+            <!-- Example Button HTML:
+           <button class="calc-btn" data-value="7">7</button>
+      -->
+        </div>
+        <!-- END PROJECT HTML FRAME -->
+
+        <section class="instructions" style="font-weight: normal; font-size: 0.9rem; color: #475569;">
+            <p><strong>How to start:</strong> Begin by building the calculator buttons and display in HTML. Then style
+                them using CSS. Finally, add JavaScript to implement the calculator logic and interactivity.</p>
+        </section>
+    </div>
+
+</body>
+
+</html>
