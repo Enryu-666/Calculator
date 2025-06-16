@@ -1,82 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
-
 <body>
-
-    <div class="project-frame">
-        <header class="project-header">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cd8b1695-ff73-49b6-8a29-f271da6d1c34.png"
-                alt="Modern calculator icon with gray background and white text, rounded edges" />
-            <h1>Beginner Simple Calculator</h1>
-            <p>Build a functional calculator using HTML, CSS, and JavaScript</p>
-        </header>
-
-        <section class="instructions">
-            <strong>Project Instructions & Milestones:</strong>
-            <ol>
-                <li><strong>HTML:</strong> Create a display area for the calculator output and buttons for digits (0-9),
-                    decimal, operators (+, −, ×, ÷), clear, and equals.</li>
-                <li><strong>CSS:</strong> Style the calculator to have a modern look with distinct buttons and a large
-                    display.</li>
-                <li><strong>JavaScript:</strong>
-                    <ul>
-                        <li>Implement button clicks to display numbers and operators in the display area.</li>
-                        <li>Calculate the result when equals is pressed.</li>
-                        <li>Implement clear button to reset the calculator display.</li>
-                        <li>Handle basic error cases, such as dividing by zero.</li>
-                    </ul>
-                </li>
-                <li><strong>Bonus:</strong> Add keyboard support for number and operator inputs.</li>
-            </ol>
-            <p><em>Follow these milestones inside the respective parts to complete the calculator project!</em></p>
-        </section>
-
-        <!-- BEGIN PROJECT HTML FRAME -->
-        <div id="calc-display" aria-live="polite" aria-atomic="true" aria-label="Calculator display" role="textbox">
-            <!-- TODO: This is where the input and results will be shown -->
-            <p id="display-output" class="display-output">0</p>
-        </div>
-
-        <div id="calc-buttons" role="group" aria-label="Calculator buttons">
-            <!-- TODO: Add buttons for digits 0-9, decimal point (.), operators +, -, ×, ÷, clear (C), and equals (=) -->
-            <!-- Example Button HTML:
-           <button class="calc-btn" data-value="7">7</button>
-      -->
-            <button class="calc-btn" data-value="7">7</button>
-            <button class="calc-btn" data-value="8">8</button>
-            <button class="calc-btn" data-value="9">9</button>
-            <button class="calc-btn operator" data-value="/">÷</button>
-            <br>
-            <button class="calc-btn" data-value="4">4</button>
-            <button class="calc-btn" data-value="5">5</button>
-            <button class="calc-btn" data-value="6">6</button>
-            <button class="calc-btn operator" data-value="-">−</button>
-            <br>
-            <button class="calc-btn" data-value="1">1</button>
-            <button class="calc-btn" data-value="2">2</button>
-            <button class="calc-btn" data-value="3">3</button>
-            <button class="calc-btn operator" data-value="+">+</button>
-            <br>
-            <button class="calc-btn" data-value="0">0</button>
-            <button class="calc-btn decimal" data-value=".">.</button>
-            <button class="calc-btn clear" data-value="C">C</button>
-            <button class="calc-btn equals" data-value="=">=</button>
-        </div>
-        <!-- END PROJECT HTML FRAME -->
-
-        <footer class="project-footer">
-            <p>© 2023 Beginner Simple Calculator Project</p>
-            <p>Created by [Julian Wong]</p>
+   <div class="container" role="main" aria-label="Simple Calculator App">
+    <header>
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63f3c06e-54e3-4183-9f2c-8343ecaabf66.png" alt="A simple calculator icon with purple background and white calculator symbol" />
+      <h1>Simple Calculator</h1>
+      <p>Clean, modern calculator with basic operations</p>
+    </header>
+    <section class="instructions">
+        <!-- ...instructions unchanged... -->
+    </section>
+    <!-- Display -->
+    <div id="display" class="display" aria-label="Calculator display" aria-multiline="false" tabindex="0">0</div>
+    <!-- Buttons -->
+    <div class="buttons" role="grid" aria-label="Calculator buttons">
+      <button type="button" class="button clear" data-key="C">C</button>
+      <button type="button" class="button operator" data-key="/">÷</button>
+      <button type="button" class="button operator" data-key="*">×</button>
+      <button type="button" class="button operator" data-key="-">−</button>
+      <button type="button" class="button number" data-key="7">7</button>
+      <button type="button" class="button number" data-key="8">8</button>
+      <button type="button" class="button number" data-key="9">9</button>
+      <button type="button" class="button operator" data-key="+">+</button>
+      <button type="button" class="button number" data-key="4">4</button>
+      <button type="button" class="button number" data-key="5">5</button>
+      <button type="button" class="button number" data-key="6">6</button>
+      <button type="button" class="button equals" data-key="=">=</button>
+      <button type="button" class="button number" data-key="1">1</button>
+      <button type="button" class="button number" data-key="2">2</button>
+      <button type="button" class="button number" data-key="3">3</button>
+      <button type="button" class="button decimal" data-key=".">.</button>
+      <button type="button" class="button number" data-key="0" style="grid-column: span 2;">0</button>
     </div>
-
+    <!-- History (optional, not implemented in JS below) -->
+    <!-- <div class="history" role="region" aria-label="Calculator history" aria-live="polite">
+        <h2>History</h2>
+        <ul id="calc-history-list"></ul>
+    </div> -->
+    <footer class="project-footer">
+        <p>© 2023 Beginner Simple Calculator Project</p>
+        <p>Created by [Julian Wong]</p>
+    </footer>
+   </div>
+   <script src="script.js"></script>
 </body>
-
 </html>

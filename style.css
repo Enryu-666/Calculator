@@ -1,9 +1,4 @@
-/* Base styling and layout for the project frame */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-* {
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
@@ -12,149 +7,126 @@ body {
     color: #1e293b;
     display: flex;
     justify-content: center;
-    padding: 32px 16px;
+    padding: 40px 16px;
     min-height: 100vh;
 }
 
-.project-frame {
-    max-width: 400px;
+.container {
+    max-width: 360px;
     width: 100%;
-    background: #ffffff;
-    border-radius: 16px;
+    background: #fff;
+    border-radius: 24px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    padding: 24px 32px 40px;
+    padding: 32px 24px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
 }
 
-.project-header {
+header {
     text-align: center;
 }
 
-.project-header img {
+header img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
     border-radius: 24px;
     margin-bottom: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
-.project-header h1 {
+header h1 {
     font-weight: 800;
     font-size: 2rem;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     color: #0f172a;
 }
 
-.project-header p {
+header p {
     font-size: 1rem;
     color: #64748b;
     margin-top: 0;
 }
 
-.instructions {
-    background: #e0e7ff;
-    border-radius: 12px;
+#display {
+    background: #eef2ff;
+    border-radius: 16px;
     padding: 20px;
-    color: #3730a3;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 600;
-    border: 2px solid #a5b4fc;
-    user-select: text;
-}
-
-/* Calculator display */
-#calc-display {
-    background: #f8fafc;
-    border: 2px solid #94a3b8;
-    border-radius: 14px;
-    font-size: 2.4rem;
-    padding: 14px 24px;
+    font-size: 2rem;
+    font-weight: 700;
     text-align: right;
-    color: #334155;
-    user-select: none;
     min-height: 60px;
-    margin-bottom: 24px;
-    font-variant-numeric: tabular-nums;
+    box-shadow: inset 0 0 8px rgba(67, 56, 202, 0.15);
     overflow-x: auto;
+    user-select: none;
 }
 
-/* Calculator buttons container */
-#calc-buttons {
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
-button.calc-btn {
-    background: #4338ca;
-    border: none;
-    color: white;
+button {
+    font-size: 1.5rem;
     font-weight: 700;
-    font-size: 1.4rem;
     padding: 18px 0;
-    border-radius: 14px;
+    border: none;
+    border-radius: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     user-select: none;
-    box-shadow: 0 4px 6px rgba(67, 56, 202, 0.3);
+    color: #1e293b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-button.calc-btn:hover {
-    background: #6366f1;
+button:hover {
+    background-color: #c7d2fe;
 }
 
-button.calc-btn.operator {
-    background: #ef4444;
-    /* red for operators */
-    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.4);
+button.operator {
+    color: #4338ca;
+    background-color: #e0e7ff;
 }
 
-button.calc-btn.operator:hover {
-    background: #f87171;
+button.operator:hover {
+    background-color: #a5b4fc;
+    color: white;
 }
-button.calc-btn.double {
+
+button.equals {
     grid-column: span 2;
+    background-color: #4338ca;
+    color: white;
 }
-button.calc-btn.double:hover {
-    background: #6366f1;
+
+button.equals:hover {
+    background-color: #6366f1;
 }
-button.calc-btn:active {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+
+button.clear {
+    background-color: #ef4444;
+    color: white;
 }
-button.calc-btn:disabled {
-    background: #d1d5db;
-    cursor: not-allowed;
-    box-shadow: none;
+
+button.clear:hover {
+    background-color: #dc2626;
 }
-button.calc-btn:disabled:hover {
-    background: #d1d5db;
-}
-button.calc-btn:focus {
+
+/* ...existing code... */
+#display.display {
+    background: #eef2ff;
+    border-radius: 16px;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+    min-height: 60px;
+    box-shadow: inset 0 0 8px rgba(67, 56, 202, 0.15);
+    overflow-x: auto;
+    user-select: none;
     outline: none;
-    box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.5);
 }
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .project-frame {
-        padding: 16px;
-    }
 
-    .project-header img {
-        width: 80px;
-        height: 80px;
-    }
-
-    #calc-display {
-        font-size: 2rem;
-        padding: 12px 16px;
-    }
-
-    button.calc-btn {
-        font-size: 1.2rem;
-        padding: 14px 0;
-    }
-}
+/* ...rest unchanged... */
